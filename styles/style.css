@@ -17,9 +17,12 @@ main.home{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top:5em;
-  padding: 5em;
   margin:0em 10em 0em;
+}
+@media screen and (max-width: 900px) {
+  main.home{
+    margin:0em 2em 0em;
+  }
 }
 
 .logo{
@@ -33,19 +36,28 @@ main.home{
 .logo .songs{
   font-weight: 300;
 }
-
 .logo-home{
   font-size: 5em;
+}
+@media screen and (max-width: 700px) {
+  .logo-home{
+    font-size: 10vw;
+  }
 }
 
 .search-bar {
   border-bottom: 0.05em solid var(--light-grey);
   width: 35em;
 }
+@media screen and (max-width: 900px) {
+  .search-bar{
+    width: 100%;
+  }
+}
 .search-bar input{
   background-color: transparent;
   border: none;
-  width: 90%;
+  width: 88%;
   font-family: 'Open Sans', sans-serif;
   color: var(--light-grey);
   font-size: 1.3em;
@@ -76,6 +88,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
+/***** TIMELINE *****/
 .cd-horizontal-timeline {
   opacity: 0;
   margin: 2em auto;
@@ -91,19 +104,24 @@ input[type=number]::-webkit-outer-spin-button {
 .cd-horizontal-timeline.loaded {
   /* show the timeline after events position has been set (using JavaScript) */
   opacity: 1;
+  width: 100%;
 }
 .cd-horizontal-timeline .timeline {
+  display:flex;
   position: relative;
-  height: 100px;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
+  height: 192px;
+  width: 100%;
+  align-items: center;
+  /*width: 90%;*/
+  /*max-width: 800px;*/
+  /*margin: 0 auto;*/
 }
 .cd-horizontal-timeline .events-wrapper {
   position: relative;
-  height: 100%;
+  height: 107px;
   margin: 0 40px;
   overflow: hidden;
+  width: 100%;
 }
 .cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
   /* these are used to create a shadow effect at the sides of the timeline */
@@ -137,6 +155,9 @@ input[type=number]::-webkit-outer-spin-button {
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
 }
+.cd-horizontal-timeline .events ol{
+  list-style: none;
+}
 .cd-horizontal-timeline .filling-line {
   /* this is used to create the green line filling the timeline */
   position: absolute;
@@ -166,14 +187,41 @@ input[type=number]::-webkit-outer-spin-button {
   z-index: 2;
   text-align: center;
   font-size: 1.3rem;
+  font-weight: lighter;
   padding-bottom: 15px;
-  color: #383838;
+  color: var(--dark-grey);
+  text-decoration: none;
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+.cd-horizontal-timeline .events div {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: var(--dark-grey);
+  text-decoration: none;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-horizontal-timeline .events div p{
+  margin:0;
+  font-size:0.7em;
+  color: var(--orange);
+  font-style: italic;
+}
+.cd-horizontal-timeline .events div p:first-child{
+  font-weight: 600;
 }
 .cd-horizontal-timeline .events a::after {
   /* this is used to create the event spot */
@@ -200,15 +248,34 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: var(--orange);
   border-color: var(--orange);
 }
+.cd-horizontal-timeline .events a:hover {
+  color: var(--orange);
+}
+.cd-horizontal-timeline .events a:hover::after {
+  border-color: var(--orange);
+}
+.cd-horizontal-timeline .events a:hover + div {
+  visibility: visible
+}
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
+  color: var(--orange);
+  font-weight: 600;
 }
 .cd-horizontal-timeline .events a.selected::after {
   background-color: var(--orange);
   border-color: var(--orange);
 }
+.cd-horizontal-timeline .events a.selected + div {
+  visibility: visible
+}
 .cd-horizontal-timeline .events a.older-event::after {
   border-color: var(--orange);
+}
+.cd-horizontal-timeline .events a.older-event {
+  color: var(--orange);
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
@@ -244,6 +311,7 @@ input[type=number]::-webkit-outer-spin-button {
   -moz-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
+
 .cd-timeline-navigation a::after {
   /* arrow icon */
   content: '';
@@ -275,9 +343,6 @@ input[type=number]::-webkit-outer-spin-button {
 .no-touch .cd-timeline-navigation a:hover {
   border-color: var(--orange);
 }
-.cd-timeline-navigation a.inactive {
-  cursor: not-allowed;
-}
 .cd-timeline-navigation a.inactive::after {
   background-position: 0 -16px;
 }
@@ -285,14 +350,29 @@ input[type=number]::-webkit-outer-spin-button {
   border-color: var(--dark-grey);
 }
 
+.timeline-navigation span{
+  color: var(--light-grey);
+  cursor: pointer;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.timeline-navigation span.inactive{
+  color: var(--dark-grey);
+  cursor: auto;
+}
+
 .cd-horizontal-timeline .events-content {
   position: relative;
   width: 100%;
-  margin: 2em 0;
   overflow: hidden;
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
   transition: height 0.4s;
+}
+.cd-horizontal-timeline .events-content ol {
+  list-style: none;
+  margin: 0;
+  padding:0;
 }
 .cd-horizontal-timeline .events-content li {
   position: absolute;
@@ -305,7 +385,6 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
-  padding: 0 5%;
   opacity: 0;
   -webkit-animation-duration: 0.4s;
   -moz-animation-duration: 0.4s;
@@ -341,15 +420,14 @@ input[type=number]::-webkit-outer-spin-button {
   animation-direction: reverse;
 }
 .cd-horizontal-timeline .events-content li > * {
-  max-width: 800px;
   margin: 0 auto;
 }
 .cd-horizontal-timeline .events-content h2 {
   font-weight: bold;
   font-size: 2.6rem;
-  font-family: "Playfair Display", serif;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--dark-blue);
 }
 .cd-horizontal-timeline .events-content em {
   display: block;
