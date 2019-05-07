@@ -131,17 +131,22 @@ jQuery(document).ready(function($){
 	function setDatePosition(timelineComponents, min) {
 		for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
 		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
-				distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.5,
-				distanceNormDivs = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.1;
+				distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.2,
+				div = timelineComponents['timelineEventsDivs'].eq(i).outerWidth();
+				halfDiv = Math.round(timelineComponents['timelineEventsDivs'].eq(i).width()/2),
+				distanceNormDivs = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.4;
+			console.log(timelineComponents['timelineEventsDivs'].eq(i)[0]);
+			console.log(div);
+			console.log(halfDiv);
 			timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
-			timelineComponents['timelineEventsDivs'].eq(i).css('left', distanceNormDivs*min+'px');
+			timelineComponents['timelineEventsDivs'].eq(i).css('left',distanceNormDivs*min - halfDiv + 'px');
 		}
 	}
 
 	function setTimelineWidth(timelineComponents, width) {
 		var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length-1]),
 			timeSpanNorm = timeSpan/timelineComponents['eventsMinLapse'],
-			timeSpanNorm = Math.round(timeSpanNorm) + 0.5,
+			timeSpanNorm = Math.round(timeSpanNorm) + 1,
 			totalWidth = timeSpanNorm*width,
 			fillWidth = 0;
 		timelineComponents['eventsWrapper'].css('width', totalWidth+'px');
