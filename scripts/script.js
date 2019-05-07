@@ -1,4 +1,43 @@
+/*INFO*/
+function getInfo() {
+    var info = [
+        {
+            year: 1968,
+            song: "Hey Jude",
+            artist: "The Beatles",
+        },
+        {
+            year: 1969,
+            song: "Sugar, Suagr",
+            artist: "The Archies",
+        },
+        {
+            year: 1970,
+            song: "Bridge over Troubled Water",
+            artist: "Simon & Garfunkel",
+        }
+    ];
+
+    return info;
+}
+
+function loadInfo(){
+	var info = getInfo()
+    var ol_events = $("div.events ol");
+    var ol_content = $("div.events-content ol");
+    for(let i = 0; i < info.length; i++){
+        var strEvent = "<li><a href=\"#0\" data-date=\"31/12/" + info[i].year +"\">"+ info[i].year +"</a><div><p>" + info[i].song + "</p><p>" + info[i].artist + "</p></div></li>";
+        var strContent = "<li data-date=\"31/12/" + info[i].year + "\"><h2>" + info[i].year + "</h2></li>";
+        
+        ol_events.append(strEvent);
+        ol_content.append(strContent);
+    }
+}
+
+/*TIMELINE*/
 jQuery(document).ready(function($){
+	loadInfo();
+	
 	var timelines = $('.cd-horizontal-timeline'),
 		eventsMinDistance = 100;
 
@@ -135,9 +174,6 @@ jQuery(document).ready(function($){
 				div = timelineComponents['timelineEventsDivs'].eq(i).outerWidth();
 				halfDiv = Math.round(timelineComponents['timelineEventsDivs'].eq(i).width()/2),
 				distanceNormDivs = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.4;
-			console.log(timelineComponents['timelineEventsDivs'].eq(i)[0]);
-			console.log(div);
-			console.log(halfDiv);
 			timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
 			timelineComponents['timelineEventsDivs'].eq(i).css('left',distanceNormDivs*min - halfDiv + 'px');
 		}
