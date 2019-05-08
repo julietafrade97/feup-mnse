@@ -136,4 +136,84 @@ main.year div.events-content{
   display:block;
 }
 
+.cd-horizontal-timeline .events-content li div.year-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.cd-horizontal-timeline .events-content li h2{
+  width: 10%;
+  font-size: 13em;
+  line-height: 0.8;
+  font-weight: 700;
+  color: var(--dark-blue);
+  word-wrap: break-word;
+  margin:0;
+
+}
+
+.cd-horizontal-timeline .events-content li div.info{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: var(--light-grey);
+  font-family: 'Open Sans', sans-serif;
+}
+.cd-horizontal-timeline .events-content li div.info h3{
+  font-size:5em;
+  font-weight: 700;
+  margin: 0;
+}
+.cd-horizontal-timeline .events-content li div.info h4{
+  font-size:2em;
+  font-weight: 200;
+  font-style: italic;
+  margin: 0;
+}
+.cd-horizontal-timeline .events-content li div.info p{
+  font-size:1.3em;
+  font-weight: 200;
+  overflow: hidden;
+  text-align: justify;
+}
+
+
+.cd-horizontal-timeline .events-content li div.media {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  margin-left: 3em;
+  justify-content: center;
+}
+
+.cd-horizontal-timeline .events-content li div.media img{
+  max-width: 100%;
+}
+
+.cd-horizontal-timeline .events-content li div.media input{
+  width: 100%;
+  background: none;
+  border:none;
+  margin-top: 1em;
+  padding: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size:1em;
+  border-radius: 5em;
+  cursor: pointer;
+}
+.cd-horizontal-timeline .events-content li div.media input:focus{
+  outline:none;
+}
+.cd-horizontal-timeline .events-content li div.media input.song{
+  background: var(--orange);
+  color: var(--light-grey);
+}
+.cd-horizontal-timeline .events-content li div.media input.video{
+  border: 0.2em solid var(--orange);
+  color: var(--orange);
+}
+
+
+
 

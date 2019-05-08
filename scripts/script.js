@@ -4,8 +4,23 @@ function loadInfo(){
     var ol_content = $("div.events-content ol");
     for(let i = 0; i < info.length; i++){
         var strEvent = "<li><a href=\"#0\" data-date=\"31/12/" + info[i].year +"\">"+ info[i].year +"</a><div><p>" + info[i].song + "</p><p>" + info[i].artist + "</p></div></li>";
-        var strContent = "<li data-date=\"31/12/" + info[i].year + "\"><h2>" + info[i].year + "</h2></li>";
-        
+        //var strContent = "<li data-date=\"31/12/" + info[i].year + "\"><h2>" + info[i].year + "</h2></li>";
+	  var strContent ="<li data-date=\"31/12/" + info[i].year + "\">" +
+		"<div class=\"year-content\">" +
+			"<h2>" + info[i].year + "</h2>" +
+			"<div class=\"info\">" +
+			"<h3>" + info[i].song + "</h3>" +
+			"<h4>" + info[i].artist + "</h4>" +
+			"<p>\"Happy\" is a song written, produced, and performed by American singer Pharrell Williams, from the Despicable Me 2soundtrack album. It also served as the lead single from Williams' second studio album, Girl (2014). It was first released on November 21, 2013, alongside a long-form music video. The song was reissued on December 16, 2013, by Back Lot Music under exclusive license to Columbia Records, a division of Sony Music.\"Happy\" is an uptempo soul and neo soulsong on which Williams's falsetto voice has been compared to Curtis Mayfield by critics. The song has been highly successful, peaking at No. 1 in the United States, United Kingdom, Canada, Ireland, New Zealand, and 19 other countries. It was the best-selling song of 2014 in the United States with 6.45 million copies sold for the year, as well as in the United Kingdom with 1.5 million copies sold for the year. It reached No. 1 in the UK on a record-setting three separate occasions and became the most downloaded song of all time in the UK in September 2014; it is the eighth highest-selling single of all time in the country. It was nominated for an Academy Award for Best Original Song. A live rendition of the song won the Grammy Award for Best Pop Solo Performance at the 57th Annual Grammy Awards.</p>" +
+			"</div>" +
+			"<div class=\"media\">" +
+			"<img src=\"../assets/image.png\">" + 
+			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
+			"<input type=\"button\" class=\"video\" value=\"Watch Music Video\">" +
+			"</div>" +
+		"</div>" +
+	"</li>";
+
         ol_events.append(strEvent);
         ol_content.append(strContent);
     }
@@ -316,7 +331,7 @@ function getInfo() {
         },
         {
             year: 1969,
-            song: "Sugar, Suagr",
+            song: "Sugar, Sugar",
             artist: "The Archies",
         },
         {
@@ -326,242 +341,242 @@ function getInfo() {
 		},
 		{
             year: 1971,
-            song: "",
+            song: "Joy to the World",
             artist: "Three Dog Night",
 		},
 		{
             year: 1972,
-            song: "",
+            song: "The First Time Ever I Saw Your Face",
             artist: "Roberta Flack",
 		},
 		{
             year: 1973,
-            song: "",
+            song: "Tie a Yellow Ribbon 'Round the Ole Oak Tree",
             artist: "Tony Orlando and Dawn",
 		},
 		{
             year: 1974,
-            song: "",
+            song: "The Way We Were",
             artist: "Barbra Streisand",
 		},
 		{
             year: 1975,
-            song: "",
+            song: "Love Will Keep Us Together",
             artist: "Captain & Tennille	",
 		},
 		{
             year: 1976,
-            song: "",
+            song: "Silly Love Songs",
             artist: "Wings",
 		},
 		{
             year: 1977,
-            song: "",
+            song: "Tonight's the Night (Gonna Be Alright)",
             artist: "Rod Stewart",
 		},
 		{
             year: 1978,
-            song: "",
+            song: "Shadow Dancing",
             artist: "Andy Gibb",
 		},
 		{
             year: 1979,
-            song: "",
+            song: "My Sharona",
             artist: "The Knack",
 		},
 		{
             year: 1980,
-            song: "",
+            song: "Call Me",
             artist: "Blondie",
 		},
 		{
             year: 1981,
-            song: "",
+            song: "Bette Davis Eyes",
             artist: "Kim Carnes",
 		},
 		{
             year: 1982,
-            song: "",
+            song: "Physical",
             artist: "Olivia Newton-John",
 		},
 		{
             year: 1983,
-            song: "",
+            song: "Every Breath You Take",
             artist: "The Police",
 		},
 		{
             year: 1984,
-            song: "",
+            song: "When Doves Cry",
             artist: "Prince",
 		},
 		{
             year: 1985,
-            song: "",
+            song: "Careless Whisper",
             artist: "Wham!",
 		},
 		{
             year: 1986,
-            song: "",
+            song: "That's What Friends Are For",
             artist: "Dionne & Friends",
 		},
 		{
             year: 1987,
-            song: "",
+            song: "Walk Like an Egyptian",
             artist: "The Bangles",
 		},
 		{
             year: 1988,
-            song: "",
+            song: "Faith",
             artist: "George Michael",
 		},
 		{
             year: 1989,
-            song: "",
+            song: "Look Away",
             artist: "Chicago",
 		},
 		{
             year: 1990,
-            song: "",
+            song: "Hold On",
             artist: "Wilson Phillips",
 		},
 		{
             year: 1991,
-            song: "",
+            song: "(Everything I Do) I Do It for You",
             artist: "Bryan Adams",
 		},
 		{
             year: 1992,
-            song: "",
+            song: "End of the Road",
             artist: "Boyz II Men",
 		},
 		{
             year: 1993,
-            song: "",
+            song: "I Will Always Love You",
             artist: "Whitney Houston",
 		},
 		{
             year: 1994,
-            song: "",
+            song: "The Sign",
             artist: "Ace of Base",
 		},
 		{
             year: 1995,
-            song: "",
+            song: "Gangsta's Paradise",
             artist: "Coolio featuring L.V.",
 		},
 		{
             year: 1996,
-            song: "",
+            song: "Macarena (Bayside Boys Mix)",
             artist: "Los del Río",
 		},
 		{
             year: 1997,
-            song: "",
+            song: "Candle in the Wind",
             artist: "Elton John",
 		},
 		{
             year: 1998,
-            song: "",
+            song:"Too Close",
             artist: "Next",
 		},
 		{
             year: 1999,
-            song: "",
+            song: "Believe",
             artist: "Cher",
 		},
 		{
             year: 2000,
-            song: "",
+            song: "Breathe",
             artist: "Faith Hill",
 		},
 		{
             year: 2001,
-            song: "",
+            song: "Hanging by a Moment",
             artist: "Lifehouse",
 		},
 		{
             year: 2002,
-            song: "",
+            song: "How You Remind Me",
             artist: "Nickelback",
 		},
 		{
             year: 2003,
-            song: "",
+            song: "In da Club",
             artist: "50 Cent",
 		},
 		{
             year: 2004,
-            song: "",
+            song: "Yeah!",
             artist: "Usher featuring Lil Jon and Ludacris",
 		},
 		{
             year: 2005,
-            song: "",
+            song: "We Belong Together",
             artist: "Mariah Carey",
 		},
 		{
             year: 2006,
-            song: "",
+            song: "Bad Day",
             artist: "Daniel Powter",
 		},
 		{
             year: 2007,
-            song: "",
+            song: "Irreplaceable",
             artist: "Beyoncé",
 		},
 		{
             year: 2008,
-            song: "",
+            song: "Low",
             artist: "Flo Rida featuring T-Pain",
 		},
 		{
             year: 2009,
-            song: "",
+            song: "Boom Boom Pow",
             artist: "The Black Eyed Peas",
 		},
 		{
             year: 2010,
-            song: "",
+            song: "Tik Tok",
             artist: "Kesha",
 		},
 		{
             year: 2011,
-            song: "",
+            song: "Rolling in the Deep",
             artist: "Adele",
 		},
 		{
             year: 2012,
-            song: "",
+            song: "Somebody That I Used to Know",
             artist: "Gotye featuring Kimbra",
 		},
 		{
             year: 2013,
-            song: "",
+            song: "Thrift Shop",
             artist: "Macklemore & Ryan Lewis featuring Wanz",
 		},
 		{
             year: 2014,
-            song: "",
+            song: "Happy",
             artist: "Pharrell Williams",
 		},
 		{
             year: 2015,
-            song: "",
+            song: "Uptown Funk",
             artist: "Mark Ronson featuring Bruno Mars",
 		},
 		{
             year: 2016,
-            song: "",
+            song: "Love Yourself",
             artist: "Justin Bieber",
 		},
 		{
             year: 2017,
-            song: "",
+            song: "Shape of You",
             artist: "Ed Sheeran",
 		},
 		{
             year: 2018,
-            song: "",
+            song: "God's Plan",
             artist: "Drake",
 		},
     ];

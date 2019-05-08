@@ -177,9 +177,6 @@
     background-color: var(--orange);
     border-color: var(--orange);
   }
-  .cd-horizontal-timeline .events a.selected + div {
-    visibility: visible
-  }
   .cd-horizontal-timeline .events a.older-event::after {
     border-color: var(--orange);
   }
@@ -330,28 +327,7 @@
   .cd-horizontal-timeline .events-content li > * {
     margin: 0 auto;
   }
-  .cd-horizontal-timeline .events-content h2 {
-    font-weight: bold;
-    font-size: 2.6rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--dark-blue);
-  }
-  .cd-horizontal-timeline .events-content em {
-    display: block;
-    font-style: italic;
-    margin: 10px auto;
-  }
-  .cd-horizontal-timeline .events-content em::before {
-    content: '- ';
-  }
-  .cd-horizontal-timeline .events-content p {
-    font-size: 1.4rem;
-    color: #959595;
-  }
-  .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
-    line-height: 1.6;
-  }
+  
   @media only screen and (min-width: 768px) {
     .cd-horizontal-timeline .events-content h2 {
       font-size: 7rem;
