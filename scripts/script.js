@@ -1,26 +1,3 @@
-/*INFO*/
-function getInfo() {
-    var info = [
-        {
-            year: 1968,
-            song: "Hey Jude",
-            artist: "The Beatles",
-        },
-        {
-            year: 1969,
-            song: "Sugar, Suagr",
-            artist: "The Archies",
-        },
-        {
-            year: 1970,
-            song: "Bridge over Troubled Water",
-            artist: "Simon & Garfunkel",
-        }
-    ];
-
-    return info;
-}
-
 function loadInfo(){
 	var info = getInfo()
     var ol_events = $("div.events ol");
@@ -37,6 +14,11 @@ function loadInfo(){
 /*TIMELINE*/
 jQuery(document).ready(function($){
 	loadInfo();
+	
+	$('.logo').on('click', function(){
+		if($('#container').hasClass('year'))
+			$('#container').removeClass('year');
+	})
 	
 	var timelines = $('.cd-horizontal-timeline'),
 		eventsMinDistance = 100;
@@ -78,6 +60,9 @@ jQuery(document).ready(function($){
 			//detect click on the a single event - show new event content
 			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
 				event.preventDefault();
+				if(!$('#container').hasClass('year'))
+					$('#container').addClass('year');
+				//------
 				timelineComponents['timelineEvents'].removeClass('selected');
 				$(this).addClass('selected');
 				updateOlderEvents($(this));
@@ -320,3 +305,266 @@ jQuery(document).ready(function($){
 		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
 });
+
+/*DATA BASE*/
+function getInfo() {
+    var info = [
+        {
+            year: 1968,
+            song: "Hey Jude",
+            artist: "The Beatles",
+        },
+        {
+            year: 1969,
+            song: "Sugar, Suagr",
+            artist: "The Archies",
+        },
+        {
+            year: 1970,
+            song: "Bridge over Troubled Water",
+            artist: "Simon & Garfunkel",
+		},
+		{
+            year: 1971,
+            song: "",
+            artist: "Three Dog Night",
+		},
+		{
+            year: 1972,
+            song: "",
+            artist: "Roberta Flack",
+		},
+		{
+            year: 1973,
+            song: "",
+            artist: "Tony Orlando and Dawn",
+		},
+		{
+            year: 1974,
+            song: "",
+            artist: "Barbra Streisand",
+		},
+		{
+            year: 1975,
+            song: "",
+            artist: "Captain & Tennille	",
+		},
+		{
+            year: 1976,
+            song: "",
+            artist: "Wings",
+		},
+		{
+            year: 1977,
+            song: "",
+            artist: "Rod Stewart",
+		},
+		{
+            year: 1978,
+            song: "",
+            artist: "Andy Gibb",
+		},
+		{
+            year: 1979,
+            song: "",
+            artist: "The Knack",
+		},
+		{
+            year: 1980,
+            song: "",
+            artist: "Blondie",
+		},
+		{
+            year: 1981,
+            song: "",
+            artist: "Kim Carnes",
+		},
+		{
+            year: 1982,
+            song: "",
+            artist: "Olivia Newton-John",
+		},
+		{
+            year: 1983,
+            song: "",
+            artist: "The Police",
+		},
+		{
+            year: 1984,
+            song: "",
+            artist: "Prince",
+		},
+		{
+            year: 1985,
+            song: "",
+            artist: "Wham!",
+		},
+		{
+            year: 1986,
+            song: "",
+            artist: "Dionne & Friends",
+		},
+		{
+            year: 1987,
+            song: "",
+            artist: "The Bangles",
+		},
+		{
+            year: 1988,
+            song: "",
+            artist: "George Michael",
+		},
+		{
+            year: 1989,
+            song: "",
+            artist: "Chicago",
+		},
+		{
+            year: 1990,
+            song: "",
+            artist: "Wilson Phillips",
+		},
+		{
+            year: 1991,
+            song: "",
+            artist: "Bryan Adams",
+		},
+		{
+            year: 1992,
+            song: "",
+            artist: "Boyz II Men",
+		},
+		{
+            year: 1993,
+            song: "",
+            artist: "Whitney Houston",
+		},
+		{
+            year: 1994,
+            song: "",
+            artist: "Ace of Base",
+		},
+		{
+            year: 1995,
+            song: "",
+            artist: "Coolio featuring L.V.",
+		},
+		{
+            year: 1996,
+            song: "",
+            artist: "Los del Río",
+		},
+		{
+            year: 1997,
+            song: "",
+            artist: "Elton John",
+		},
+		{
+            year: 1998,
+            song: "",
+            artist: "Next",
+		},
+		{
+            year: 1999,
+            song: "",
+            artist: "Cher",
+		},
+		{
+            year: 2000,
+            song: "",
+            artist: "Faith Hill",
+		},
+		{
+            year: 2001,
+            song: "",
+            artist: "Lifehouse",
+		},
+		{
+            year: 2002,
+            song: "",
+            artist: "Nickelback",
+		},
+		{
+            year: 2003,
+            song: "",
+            artist: "50 Cent",
+		},
+		{
+            year: 2004,
+            song: "",
+            artist: "Usher featuring Lil Jon and Ludacris",
+		},
+		{
+            year: 2005,
+            song: "",
+            artist: "Mariah Carey",
+		},
+		{
+            year: 2006,
+            song: "",
+            artist: "Daniel Powter",
+		},
+		{
+            year: 2007,
+            song: "",
+            artist: "Beyoncé",
+		},
+		{
+            year: 2008,
+            song: "",
+            artist: "Flo Rida featuring T-Pain",
+		},
+		{
+            year: 2009,
+            song: "",
+            artist: "The Black Eyed Peas",
+		},
+		{
+            year: 2010,
+            song: "",
+            artist: "Kesha",
+		},
+		{
+            year: 2011,
+            song: "",
+            artist: "Adele",
+		},
+		{
+            year: 2012,
+            song: "",
+            artist: "Gotye featuring Kimbra",
+		},
+		{
+            year: 2013,
+            song: "",
+            artist: "Macklemore & Ryan Lewis featuring Wanz",
+		},
+		{
+            year: 2014,
+            song: "",
+            artist: "Pharrell Williams",
+		},
+		{
+            year: 2015,
+            song: "",
+            artist: "Mark Ronson featuring Bruno Mars",
+		},
+		{
+            year: 2016,
+            song: "",
+            artist: "Justin Bieber",
+		},
+		{
+            year: 2017,
+            song: "",
+            artist: "Ed Sheeran",
+		},
+		{
+            year: 2018,
+            song: "",
+            artist: "Drake",
+		},
+    ];
+
+    return info;
+}

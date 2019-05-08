@@ -26,25 +26,43 @@ div.header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+  margin-top: 10em;
+  margin-bottom: 8em;
+}
+main.year div.header{
+  transition: all 0.5s ease;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 6vh;
+  margin-top: 2em;
+  margin-bottom: 0em;
 }
 .logo{
   color: var(--orange);
   font-style: italic;
   display:flex;
+  font-size: 5em;
+  cursor:pointer;
 }
 .logo .fifty{
   font-weight: 600;
+  margin:0;
 }
 .logo .songs{
   font-weight: 300;
-}
-.logo-home{
-  font-size: 5em;
+  margin:0;
 }
 @media screen and (max-width: 700px) {
-  .logo-home{
+  .logo{
     font-size: 10vw;
   }
+}
+main.year .logo{
+  font-size:1.7em;
+  padding-bottom:0.6em;
 }
 
 .search-bar {
@@ -87,3 +105,35 @@ input[type=number]::-webkit-outer-spin-button {
 .search-bar a span{
   font-size: 1.5em;
 }
+@media screen and (max-width: 1400px) {
+  main.year .search-bar{
+    display:none;
+  }
+}
+
+div.player{
+  display: none;
+}
+main.year div.player{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+div.player audio:focus{
+  outline:none;
+}
+div.player img{
+  max-height: 100%;
+  padding-left: 1em;
+}
+
+div.events-content{
+  display:none;
+}
+
+main.year div.events-content{
+  display:block;
+}
+
+

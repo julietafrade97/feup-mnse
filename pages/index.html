@@ -15,15 +15,21 @@
 </head>
 
 <body>
-    <main>
+    <main id="container">
         <div class="header">
-            <div class="logo logo-home">
+            <div class="logo">
                 <h1 class="fifty">Fifty</h1>
                 <h1 class="songs">Songs</h1>
             </div>
             <div class="search-bar">
                 <input type="number" min="1968" max="2018" maxlength="4" class="search" placeholder="Search a year between 1968 and 2018">
                 <a href="./year.html"><span class="lnr lnr-magnifier"></span></a>
+            </div>
+            <div class="player">
+                <audio controls>
+                    <source src="../assets/songs/05 Set Fire to the Rain.mp3" type="audio/mp3">
+                </audio>
+                <img src="../assets/image.png">
             </div>
         </div>
         <section class="cd-horizontal-timeline">
@@ -43,8 +49,6 @@
                     </ol>
                 </div> <!-- .events-content -->
             </section>
-
-
     </main>
     <!--footer-->
 </body>
