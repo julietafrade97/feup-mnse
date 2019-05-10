@@ -33,7 +33,42 @@ jQuery(document).ready(function($){
 	$('.logo').on('click', function(){
 		if($('#container').hasClass('year'))
 			$('#container').removeClass('year');
+	});
+
+	$('.search-input').on("keyup", function(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			$('.search-icon').click();
+		}
+	});
+
+	$('.search-icon').on('click',function(){
+		var input = $('.search-input');
+		var bar = $('.search-bar');
+
+		if(input.is(":invalid")){
+			if(!bar.hasClass('invalid')){
+				bar.addClass('invalid');
+			}	
+			else{
+				bar.removeClass('invalid');
+				void this.clientWidth;
+				bar.addClass('invalid');
+			}
+		}
+		else{
+			if(bar.hasClass('invalid')){
+				bar.removeClass('invalid');
+			}
+			var year = input.val();
+			var a= $("a:contains('" + year +"')");
+			a.click();
+		}
 	})
+
+
+
+	////////////
 	
 	var timelines = $('.cd-horizontal-timeline'),
 		eventsMinDistance = 100;
