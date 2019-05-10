@@ -64,9 +64,16 @@ jQuery(document).ready(function($){
 			var a= $("a:contains('" + year +"')");
 			a.click();
 		}
-	})
-
-
+	});
+	
+	$('input.song').on('click', function(){
+		$('.player').css('visibility', 'visible');
+		var year = $('.events-content li.selected .year-content h2').text();
+		$('.audio-source').attr("src", "../assets/songs/" + year + ".mp3");
+		$('audio')[0].pause();
+		$('audio')[0].load();
+		$('audio')[0].play();
+	});
 
 	////////////
 	

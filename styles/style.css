@@ -133,6 +133,7 @@ div.player{
 }
 main.year div.player{
   display: flex;
+  visibility: hidden;
   align-items: center;
   justify-content: space-between;
   height: 100%;
@@ -166,7 +167,7 @@ main.year div.events-content{
   color: var(--dark-blue);
   word-wrap: break-word;
   margin:0;
-
+  cursor: default;
 }
 
 .cd-horizontal-timeline .events-content li div.info{
@@ -211,29 +212,24 @@ main.year div.events-content{
 
 .cd-horizontal-timeline .events-content li div.media input{
   width: 100%;
-  background: none;
-  border:none;
   margin-top: 1em;
+  background: none;
   padding: 0.7em;
   font-family: 'Open Sans', sans-serif;
   font-size:1.2em;
   border-radius: 5em;
   cursor: pointer;
-  transition: all .1s ease;
+  transition: all .2s ease;
+  opacity: 1;
+  border: 0.1em solid var(--orange);
+  color: var(--orange);
 }
 .cd-horizontal-timeline .events-content li div.media input:focus{
   outline:none;
 }
 .cd-horizontal-timeline .events-content li div.media input:hover{
-  transform: scale(1.05);
-}
-.cd-horizontal-timeline .events-content li div.media input.song{
   background: var(--orange);
   color: var(--light-grey);
-}
-.cd-horizontal-timeline .events-content li div.media input.video{
-  border: 0.1em solid var(--orange);
-  color: var(--orange);
 }
 
 /*TRANSITIONS*/
