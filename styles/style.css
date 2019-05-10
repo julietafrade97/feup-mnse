@@ -142,8 +142,10 @@ div.player audio:focus{
   outline:none;
 }
 div.player img{
+  border-radius: 50%;
   max-height: 100%;
-  padding-left: 1em;
+  margin-left: 1em;
+  border: 0.2em solid var(--light-grey);
 }
 
 div.events-content{
@@ -208,6 +210,7 @@ main.year div.events-content{
 
 .cd-horizontal-timeline .events-content li div.media img{
   max-width: 100%;
+  border-radius: 50%;
 }
 
 .cd-horizontal-timeline .events-content li div.media input{

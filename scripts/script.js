@@ -14,7 +14,7 @@ function loadInfo(){
 			"<p>\"Happy\" is a song written, produced, and performed by American singer Pharrell Williams, from the Despicable Me 2soundtrack album. It also served as the lead single from Williams' second studio album, Girl (2014). It was first released on November 21, 2013, alongside a long-form music video. The song was reissued on December 16, 2013, by Back Lot Music under exclusive license to Columbia Records, a division of Sony Music.\"Happy\" is an uptempo soul and neo soulsong on which Williams's falsetto voice has been compared to Curtis Mayfield by critics. The song has been highly successful, peaking at No. 1 in the United States, United Kingdom, Canada, Ireland, New Zealand, and 19 other countries. It was the best-selling song of 2014 in the United States with 6.45 million copies sold for the year, as well as in the United Kingdom with 1.5 million copies sold for the year. It reached No. 1 in the UK on a record-setting three separate occasions and became the most downloaded song of all time in the UK in September 2014; it is the eighth highest-selling single of all time in the country. It was nominated for an Academy Award for Best Original Song. A live rendition of the song won the Grammy Award for Best Pop Solo Performance at the 57th Annual Grammy Awards.</p>" +
 			"</div>" +
 			"<div class=\"media\">" +
-			"<img src=\"../assets/image.png\">" + 
+			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" + 
 			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
 			"<input type=\"button\" class=\"video\" value=\"Watch Music Video\">" +
 			"</div>" +
@@ -69,6 +69,7 @@ jQuery(document).ready(function($){
 	$('input.song').on('click', function(){
 		$('.player').css('visibility', 'visible');
 		var year = $('.events-content li.selected .year-content h2').text();
+		$('.player').children('img').attr("src", "../assets/images/" + year + ".jpg");
 		$('.audio-source').attr("src", "../assets/songs/" + year + ".mp3");
 		$('audio')[0].pause();
 		$('audio')[0].load();
