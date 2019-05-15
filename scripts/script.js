@@ -15,7 +15,8 @@ function loadInfo(){
 			"<p>" + info[i].info2 + "</p>" +
 			"</div>" +
 			"<div class=\"media noselect\">" +
-			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" + 
+			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" +
+			"<span class=\"dot\"></span>" +
 			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
 			"<input type=\"button\" class=\"video\" value=\"Watch Music Video\">" +
 			"</div>" +
@@ -72,9 +73,33 @@ jQuery(document).ready(function($){
 		var year = $('.events-content li.selected .year-content h2').text();
 		$('.player').children('img').attr("src", "../assets/images/" + year + ".jpg");
 		$('.audio-source').attr("src", "../assets/songs/" + year + ".mp3");
+		
+		var prevyear = $('audio').attr("class").split(' ')[1];
+		$('audio').removeClass(prevyear);
+		$('audio').addClass(year);
+
 		$('audio')[0].pause();
 		$('audio')[0].load();
 		$('audio')[0].play();
+
+		$('.media img.rotate').removeClass('rotate');
+		$('.media img[src=\"../assets/images/' + year + '.jpg\"').addClass('rotate');
+	});
+
+	$('audio').on('play', function() {
+		var year = $('audio').attr("class").split(' ')[1];
+		//$('.media img[src=\"../assets/images/' + year + '.jpg\"').addClass('rotate');
+		$('.media img[src=\"../assets/images/' + year + '.jpg\"').css('-webkit-animation-play-state', function(i, v) {
+			return v === 'paused' ? 'running' : 'running';
+		});
+	});
+
+	$('audio').on('pause',function() {
+		//$('.media img.rotate').removeClass('rotate');
+		$('.media img.rotate').css('-webkit-animation-play-state', function(i, v) {
+			return v === 'paused' ? 'paused' : 'paused';
+		});
+
 	});
 
 	////////////

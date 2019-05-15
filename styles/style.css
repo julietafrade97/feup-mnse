@@ -221,6 +221,7 @@ main.year div.events-content{
   width: 20%;
   margin-left: 3em;
   justify-content: center;
+  margin-right: 1em;
 }
 
 .cd-horizontal-timeline .events-content li div.media img{
@@ -228,6 +229,31 @@ main.year div.events-content{
   border-radius: 50%;
   border: .2em solid var(--orange);
   margin:-7px
+}
+
+.cd-horizontal-timeline .events-content li div.media img.rotate{
+  animation: rotation 3.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.dot {
+  position: absolute;
+  right: 7.9em;
+  bottom: 22.8em;
+  height: 5em;
+  width: 5em;
+  background-color: var(--very-dark-blue);
+  border: .2em solid var(--orange);
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .cd-horizontal-timeline .events-content li div.media input{
