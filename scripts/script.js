@@ -15,8 +15,10 @@ function loadInfo(){
 			"<p>" + info[i].info2 + "</p>" +
 			"</div>" +
 			"<div class=\"media noselect\">" +
+			"<div class=\"disco\">" +
 			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" +
 			"<span class=\"dot\"></span>" +
+			"</div>"+
 			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
 			"<input type=\"button\" class=\"video\" value=\"Watch Music Video\">" +
 			"</div>" +

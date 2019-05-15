@@ -224,8 +224,14 @@ main.year div.events-content{
   margin-right: 1em;
 }
 
+.disco{
+  width: 100%;
+  position: relative;
+  margin-bottom:1em;
+}
+
 .cd-horizontal-timeline .events-content li div.media img{
-  max-width: 100%;
+  width: 100%;
   border-radius: 50%;
   border: .2em solid var(--orange);
   margin:-7px
@@ -246,8 +252,8 @@ main.year div.events-content{
 
 .dot {
   position: absolute;
-  right: 7.9em;
-  bottom: 22.8em;
+  top: 35%;
+  right: 38%;
   height: 5em;
   width: 5em;
   background-color: var(--very-dark-blue);
