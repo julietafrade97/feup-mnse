@@ -19,8 +19,8 @@ function loadInfo(){
 			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" +
 			"<span class=\"dot\"></span>" +
 			"</div>"+
-			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
-			"<input type=\"button\" class=\"video\" value=\"Watch Music Video\">" +
+			"><input type=\"button\" class=\"song\" value=\"Play Song\">" + 
+			"<a href=\"" + info[i].videourl +  "\"target=\"_blank\"><input type=\"button\" class=\"video\" value=\"Watch Music Video\"></a>" +
 			"</div>" +
 		"</div>" +
 	"</li>";
@@ -400,8 +400,9 @@ function getInfo() {
             song: "Hey Jude",
 		artist: "The Beatles",
 		info1: "&quot;Hey Jude&quot; is a song by the English rock band the Beatles that was released as a non-album single in August 1968. It was written by Paul McCartney and credited to the Lennon&ndash;McCartney partnership. The single was the Beatles' first release on their Apple record label and one of the &quot;First Four&quot; singles by Apple's roster of artists, marking the label's public launch. &quot;Hey Jude&quot; was a number-one hit in many countries around the world and became the top-selling single of 1968 in the UK, the US, Australia and Canada. Its nine-week run at number one on the Billboard Hot 100 tied the all-time record in 1968 for the longest run at the top of the US charts. It has sold approximately eight million copies and is frequently included on music critics' lists of the greatest songs of all time.",
-		info2: "The writing and recording of &quot;Hey Jude&quot; coincided with a period of upheaval in the Beatles. The ballad evolved from &quot;Hey Jules&quot;, a song McCartney wrote to comfort John Lennon's son, Julian, after Lennon had left his wife for the Japanese artist Yoko Ono. The lyrics espouse a positive outlook on a sad situation, while also encouraging &quot;Jude&quot; to pursue his opportunities to find love. After the fourth verse, the song shifts to a wordless, fade-out coda that lasts for over four minutes. Recording for the song took place midway through the sessions for the Beatles' self-titled double album (also known as the &quot;White Album&quot;) and led to an argument between McCartney and George Harrison over Harrison's idea for the guitar part. Ringo Starr later left the band only to return shortly before they filmed the promotional clip for the single. The clip was directed by Michael Lindsay-Hogg and first aired on David Frost's UK television show. Contrasting with the problems afflicting the band, this performance captured the song's theme of optimism and togetherness by featuring the studio audience joining the Beatles as they sang the coda."
-        },
+		info2: "The writing and recording of &quot;Hey Jude&quot; coincided with a period of upheaval in the Beatles. The ballad evolved from &quot;Hey Jules&quot;, a song McCartney wrote to comfort John Lennon's son, Julian, after Lennon had left his wife for the Japanese artist Yoko Ono. The lyrics espouse a positive outlook on a sad situation, while also encouraging &quot;Jude&quot; to pursue his opportunities to find love. After the fourth verse, the song shifts to a wordless, fade-out coda that lasts for over four minutes. Recording for the song took place midway through the sessions for the Beatles' self-titled double album (also known as the &quot;White Album&quot;) and led to an argument between McCartney and George Harrison over Harrison's idea for the guitar part. Ringo Starr later left the band only to return shortly before they filmed the promotional clip for the single. The clip was directed by Michael Lindsay-Hogg and first aired on David Frost's UK television show. Contrasting with the problems afflicting the band, this performance captured the song's theme of optimism and togetherness by featuring the studio audience joining the Beatles as they sang the coda.",
+		videourl: "https://www.youtube.com/watch?v=A_MjCqQoLLA"
+	},
         {
             year: 1969,
             song: "Sugar, Sugar",
