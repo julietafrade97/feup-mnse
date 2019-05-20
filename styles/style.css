@@ -183,6 +183,14 @@ main.year div.events-content{
   cursor: default;
 }
 
+.cd-horizontal-timeline .events-content li h2.on{
+  -webkit-animation: swing 1.5s ease;
+  animation: swing 1.5s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
 .cd-horizontal-timeline .events-content li div.info{
   display: flex;
   flex-direction: column;
@@ -229,12 +237,45 @@ main.year div.events-content{
   position: relative;
   margin-bottom:1em;
 }
+.disco:hover .dot{
+  opacity: 0;
+  transition: all .3s ease; 
+}
+
+.disco.rotate:hover .dot{
+  opacity: 1;
+  transition: all .3s ease; 
+}
+.disco.rotate:hover img{
+  border: .2em solid var(--orange) !important;
+
+  -webkit-box-shadow: 1px 2px 42px -14px rgba(0,0,0,1) !important;
+  -moz-box-shadow: 1px 2px 42px -14px rgba(0,0,0,1) !important;
+  box-shadow: 1px 2px 42px -14px rgba(0,0,0,1) !important;
+}
+
+
+.disco:hover img{
+  border: .2em solid rgba(0,0,0,0.1) !important;
+
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  transform: scale(1.15);
+  
+}
 
 .cd-horizontal-timeline .events-content li div.media img{
   width: 100%;
   border-radius: 50%;
   border: .2em solid var(--orange);
-  margin:-7px
+  margin:-7px;
+  transition: all .3s ease;
+
+  -webkit-box-shadow: 1px 2px 42px -14px rgba(0,0,0,1);
+  -moz-box-shadow: 1px 2px 42px -14px rgba(0,0,0,1);
+  box-shadow: 1px 2px 42px -14px rgba(0,0,0,1);
 }
 
 .cd-horizontal-timeline .events-content li div.media img.rotate{
@@ -260,6 +301,14 @@ main.year div.events-content{
   border: .2em solid var(--orange);
   border-radius: 50%;
   display: inline-block;
+
+  -webkit-box-shadow: inset 1px 2px 42px -14px rgba(0,0,0,1);
+  -moz-box-shadow: inset 1px 2px 42px -14px rgba(0,0,0,1);
+  box-shadow: inset 1px 2px 42px -14px rgba(0,0,0,1);
+}
+
+.cd-horizontal-timeline .events-content li div.media a{
+  width:100%;
 }
 
 .cd-horizontal-timeline .events-content li div.media input{
@@ -351,6 +400,81 @@ main.year div.events-content{
         transform: translateX(0);
     }
 }
+
+
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
 
 
 

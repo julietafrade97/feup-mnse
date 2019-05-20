@@ -19,7 +19,7 @@ function loadInfo(){
 			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" +
 			"<span class=\"dot\"></span>" +
 			"</div>"+
-			"><input type=\"button\" class=\"song\" value=\"Play Song\">" + 
+			"<input type=\"button\" class=\"song\" value=\"Play Song\">" + 
 			"<a href=\"" + info[i].videourl +  "\"target=\"_blank\"><input type=\"button\" class=\"video\" value=\"Watch Music Video\"></a>" +
 			"</div>" +
 		"</div>" +
@@ -85,7 +85,9 @@ jQuery(document).ready(function($){
 		$('audio')[0].play();
 
 		$('.media img.rotate').removeClass('rotate');
+		$('.media img.rotate').parent().removeClass('rotate');
 		$('.media img[src=\"../assets/images/' + year + '.jpg\"').addClass('rotate');
+		$('.media img[src=\"../assets/images/' + year + '.jpg\"').parent().addClass('rotate');
 	});
 
 	$('audio').on('play', function() {
@@ -145,15 +147,22 @@ jQuery(document).ready(function($){
 			});
 			//detect click on the a single event - show new event content
 			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
+				
 				event.preventDefault();
+				$('.cd-horizontal-timeline .events-content li h2').removeClass('on');
 				if(!$('#container').hasClass('year'))
 					$('#container').addClass('year');
 				//------
+				
 				timelineComponents['timelineEvents'].removeClass('selected');
 				$(this).addClass('selected');
 				updateOlderEvents($(this));
 				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
 				updateVisibleContent($(this), timelineComponents['eventsContent']);
+
+				
+				$('.cd-horizontal-timeline .events-content li h2').addClass('on');
+				
 			});
 
 			//on swipe, show next/prev event content
@@ -282,6 +291,8 @@ jQuery(document).ready(function($){
 			selectedContent.removeClass('enter-left enter-right');
 		});
 		eventsContent.css('height', selectedContentHeight+'px');
+
+		
 	}
 
 	function updateOlderEvents(event) {
