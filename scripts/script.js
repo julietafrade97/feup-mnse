@@ -16,7 +16,7 @@ function loadInfo(){
 			"</div>" +
 			"<div class=\"media noselect\">" +
 			"<div class=\"disco\">" +
-			"<img src=\"../assets/images/" + info[i].year + ".jpg\">" +
+			"<img src=\"../assets/themeImages/" + info[i].year + ".jpg\">" +
 			"<span class=\"dot\"></span>" +
 			"</div>"+
 			"<input type=\"button\" class=\"song\" value=\"Play Song\">" +
@@ -73,7 +73,7 @@ jQuery(document).ready(function($){
 	$('input.song').on('click', function(){
 		$('.player').css('visibility', 'visible');
 		var year = $('.events-content li.selected .year-content h2').text();
-		$('.player').children('img').attr("src", "../assets/images/" + year + ".jpg");
+		$('.player').children('img').attr("src", "../assets/themeImages/" + year + ".jpg");
 		$('.audio-source').attr("src", "../assets/songs/" + year + ".mp3");
 
 		var prevyear = $('audio').attr("class").split(' ')[1];
@@ -86,14 +86,14 @@ jQuery(document).ready(function($){
 
 		$('.media img.rotate').removeClass('rotate');
 		$('.media img.rotate').parent().removeClass('rotate');
-		$('.media img[src=\"../assets/images/' + year + '.jpg\"').addClass('rotate');
-		$('.media img[src=\"../assets/images/' + year + '.jpg\"').parent().addClass('rotate');
+		$('.media img[src=\"../assets/themeImages/' + year + '.jpg\"').addClass('rotate');
+		$('.media img[src=\"../assets/themeImages/' + year + '.jpg\"').parent().addClass('rotate');
 	});
 
 	$('audio').on('play', function() {
 		var year = $('audio').attr("class").split(' ')[1];
 		//$('.media img[src=\"../assets/images/' + year + '.jpg\"').addClass('rotate');
-		$('.media img[src=\"../assets/images/' + year + '.jpg\"').css('-webkit-animation-play-state', function(i, v) {
+		$('.media img[src=\"../assets/themeImages/' + year + '.jpg\"').css('-webkit-animation-play-state', function(i, v) {
 			return v === 'paused' ? 'running' : 'running';
 		});
 	});
