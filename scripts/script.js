@@ -547,7 +547,8 @@ function getInfo() {
             song: "Careless Whisper",
 		artist: "Wham!",
 		info1: "&quot;Careless Whisper&quot; is a pop ballad by English singer-songwriter George Michael (sometimes credited to &quot;Wham! featuring George Michael&quot; in Japan, Canada and the United States). It was released on 24 July 1984, by Epic Records in the United Kingdom, Japan and other countries, and by Columbia Records in North America. The song was released while Michael was still performing as a member of Wham! and is included on the Wham! album, Make it Big.",
-		info2: "The song features a prominent saxophone riff, and has been covered by a number of artists since its first release. It was released as a single and became a huge commercial success on both sides of the Atlantic and on both sides of the Pacific. It reached number one in nearly 25 countries, selling about 6 million copies worldwide&mdash;2 million of them in the United States."
+		info2: "The song features a prominent saxophone riff, and has been covered by a number of artists since its first release. It was released as a single and became a huge commercial success on both sides of the Atlantic and on both sides of the Pacific. It reached number one in nearly 25 countries, selling about 6 million copies worldwide&mdash;2 million of them in the United States.",
+		videourl: "https://www.youtube.com/watch?v=izGwDsrQ1eQ"
 		},
 		{
             year: 1986,
@@ -602,7 +603,8 @@ function getInfo() {
             song: "End of the Road",
 		artist: "Boyz II Men",
 		info1: "&quot;End of the Road&quot; is a single recorded by American R&amp;B group Boyz II Men for the Boomerang soundtrack. It was released in 1992 and written and produced by Kenneth &quot;Babyface&quot; Edmonds, L.A. Reid and Daryl Simmons.",
-		info2: "&quot;End of the Road&quot; achieved overwhelming domestic and international success and is considered one of the most successful songs of all time. In the United States, &quot;End of the Road&quot; spent a then record breaking 13 weeks at number one on the US Billboard Hot 100, a record broken later in the year by Whitney Houston's 14-week number one hit &quot;I Will Always Love You&quot;; Boyz II Men would later match Houston's record with &quot;I'll Make Love to You&quot;, which spent 14 weeks at number one in 1994, and then reclaim the record with &quot;One Sweet Day&quot; (a duet with Mariah Carey), which spent 16 weeks at number one from 1995 to 1996."
+		info2: "&quot;End of the Road&quot; achieved overwhelming domestic and international success and is considered one of the most successful songs of all time. In the United States, &quot;End of the Road&quot; spent a then record breaking 13 weeks at number one on the US Billboard Hot 100, a record broken later in the year by Whitney Houston's 14-week number one hit &quot;I Will Always Love You&quot;; Boyz II Men would later match Houston's record with &quot;I'll Make Love to You&quot;, which spent 14 weeks at number one in 1994, and then reclaim the record with &quot;One Sweet Day&quot; (a duet with Mariah Carey), which spent 16 weeks at number one from 1995 to 1996.",
+		videourl: "https://www.youtube.com/watch?v=zDKO6XYXioc"
 		},
 		{
             year: 1993,
