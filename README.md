@@ -1,4 +1,4 @@
-# Multiédia e Novos Serviços
+# Multiédia e Novos Serviços - FiftySongs
 
 ## Objectivo
 O objetivo deste projeto é fazer um site do tipo informativo, interativo e apelativo para o utilizador. Neste site o utilizador poderá saber qual o maior sucesso musical de cada ano entre 1968 e 2018. Para além disso, poderá ouvir as mesmas e assistir ao vídeo clip. Pretende-se, assim, que o utilizador consiga ver a evolução da música ao longo do tempo, de forma dinâmica.
